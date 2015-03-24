@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.Veiculo;
 import model.jdbc.Conexao;
 
@@ -13,7 +15,9 @@ public class VeiculoDao implements ICRUD<Veiculo> {
 	public PreparedStatement prepara;
 	
 	public VeiculoDao() {
-	connect = Conexao.getConnection();
+            
+                connect = Conexao.getConnection();
+            
 	}
 	
 	@Override

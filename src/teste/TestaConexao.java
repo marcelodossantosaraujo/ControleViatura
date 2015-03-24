@@ -34,17 +34,21 @@ private static void testeModelo() {
 	SetVeiculo set = teste.setCategoria();
 	Modelo mod = set.setCategoria();
 	mod.setMarca("CG");
-	mod.setModelo("Titan");
+	mod.setModelo("TitaFSJKMNKHGFn");
 	
-	ICRUD<Modelo> mode = new ModeloDao();
+	ICRUD<Modelo> mode;
+	
+		mode = new ModeloDao();
+		try {
+			mode.create(mod);
+			System.out.println("dados cadastrados com sucesso!");
+		} catch (SQLException e) {
+			System.out.println("Falha ao cadastrar!");
+			e.printStackTrace();
+		}
+	
 
-	try {
-		mode.create(mod);
-		System.out.println("dados cadastrados com sucesso!");
-	} catch (SQLException e) {
-		System.out.println("Falha ao cadastrar!");
-		e.printStackTrace();
-	}
+	
 }
 
 

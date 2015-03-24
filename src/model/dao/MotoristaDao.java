@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.Motorista;
 import model.jdbc.Conexao;
 
@@ -14,7 +16,9 @@ public class MotoristaDao implements ICRUD<Motorista> {
 	public PreparedStatement prepara;
 	
 	public MotoristaDao() {
-	connect = Conexao.getConnection();
+            
+                connect = Conexao.getConnection();
+            
 	}
 	
 	@Override

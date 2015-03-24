@@ -12,12 +12,7 @@
 <jsp:include page="header.jsp" /> 
  
   <div class="container">
-
-      <?php 
-        require_once 'header-adm.php';
-      ?>
-
-      
+     
         <div class="row-fluid">
            <div class="span12">
               &nbsp;
@@ -59,8 +54,6 @@
     </div>
     </div>
     </div>
-    
-    
-    
+        
 </body>
 </html>
