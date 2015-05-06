@@ -46,8 +46,15 @@ public class ModeloServlet extends HttpServlet {
      * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
      * response)
      */
+    /**
+     * Este Metodo utiliza o Abstract Factory Para retornar atraves de ID do select uma string a qual sera salva no Banco.
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException 
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+           
         PrintWriter saida = response.getWriter();
         saida.println("chegou aqui");
         

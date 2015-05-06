@@ -47,7 +47,7 @@
     </li>
     <li><a href="#">Cadastros</a>
       <ul>
-          <li><a href="http://www.semarh.goias.gov.br/site/conteudo/parque-estadual-da-serra-de-caldas-novas-pescan">Modelo</a></li>
+          <li><a href="CadastroModelo.jsp">Modelo</a></li>
           
       </ul>
     </li>

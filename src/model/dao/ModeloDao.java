@@ -2,9 +2,10 @@ package model.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
-
 import model.Modelo;
 import model.jdbc.Conexao;
 
@@ -49,8 +50,36 @@ return 0;
 
 	@Override
 	public List<Modelo> restriveAll() throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		
+            
+            
+            List<Modelo> listaModelos = new ArrayList<>();
+		Modelo modelo;
+		String sql = "select * from modelos";
+
+		prepara = connect.prepareStatement(sql);
+
+		ResultSet rs = prepara.executeQuery();
+
+		while (rs.next()) {
+			modelo = new Modelo();
+                        modelo.setCategoria(rs.getString("categoria"));
+                        modelo.setMarca(rs.getString("marca"));
+                        modelo.setModelo(rs.getString("modelo"));
+                        modelo.setId(rs.getInt("pk_modelo"));
+
+			listaModelos.add(modelo);
+		}
+		prepara.close();
+
+		return listaModelos;
+            
+            
+            
+            
+            
+            
+//		return null;
 	}
 
 	@Override

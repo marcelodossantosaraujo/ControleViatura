@@ -1,6 +1,15 @@
 package model;
 
 public class Modelo {
+        private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 	private String modelo;
 	private String marca;
 	private String categoria;
