@@ -21,15 +21,15 @@ import model.jdbc.Conexao;
 /**
  * Servlet implementation class ModeloServlet
  */
-@WebServlet(name = "ModeloServlet", urlPatterns = {"/CadastroModelo"})
-public class ModeloServlet extends HttpServlet {
+@WebServlet(name = "VeiculoServlet", urlPatterns = {"/CadastroVeiculo"})
+public class VeiculoServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ModeloServlet() {
+    public VeiculoServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
