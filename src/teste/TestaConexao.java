@@ -8,11 +8,12 @@ import model.dao.ICRUD;
 import model.dao.ModeloDao;
 import model.dao.MotoristaDao;
 import model.dao.categorias.*;
+import model.dao.factoresMetod.TipoCategoria;
 
 public class TestaConexao {
 	
 	public static void main(String[] args) {
-	testeModelo();
+	testeMetod();
 //		Conexao.getConnection();
 //		testa_crud();
 //		Veiculo carro = new Veiculo();
@@ -50,7 +51,28 @@ private static void testeModelo() {
 
 	
 }
-
+private static void testeMetod() {
+	   TipoCategoria teste = new TipoCategoria();
+        int categoria = 4;
+        
+        Modelo mod = teste.getValor(categoria);
+	System.out.println(mod.getCategoria());
+        
+        mod.setMarca("CG");
+	mod.setModelo("Tita");
+	
+	ICRUD<Modelo> mode;
+	
+		mode = new ModeloDao();
+		try {
+			mode.create(mod);
+			System.out.println("dados cadastrados com sucesso!");
+		} catch (SQLException e) {
+			System.out.println("Falha ao cadastrar!");
+			e.printStackTrace();
+		}
+	
+}
 
 	
 	
